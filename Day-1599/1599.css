@@ -1,0 +1,150 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("1599-fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("1599-fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-black: hsl(0, 0, 0);
+  --color-white: hsl(0, 0, 100%);
+  --color-lite-yellow-white: hsl(43, 100%, 98%);
+  --color-dark-blue: hsl(210, 29%, 24%);
+  --color-dark-grey: hsl(0, 0%, 77%);
+  --color-lite-blue-white: hsl(213, 55%, 94%);
+  --color-lite-bg: hsl(216, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-lite-bg);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.container__card {
+  position: relative;
+  width: 381px;
+  height: 652px;
+  background-color: var(--color-lite-yellow-white);
+  border-radius: 30px;
+  padding: 70px;
+}
+
+.shadow__card {
+  position: absolute;
+  left: -48.5px;
+  top: -137px;
+  width: 478px;
+  height: 726px;
+  background-color: var(--color-lite-blue-white);
+  z-index: -1;
+  border-radius: 70px;
+}
+
+.close::before,
+.close::after {
+  position: absolute;
+  left: 334px;
+  top: 34px;
+  content: "";
+  display: block;
+  margin-top: -3px;
+  width: 20px;
+  height: 1.45px;
+  background: var(--color-dark-blue);
+  border-radius: 1px;
+}
+
+.close::before {
+  transform: rotate(-45deg);
+}
+
+.close::after {
+  transform: rotate(45deg);
+}
+
+label[for="place"],
+label[for="date"],
+label[for="temperature"] {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 51px;
+  background-color: var(--color-lite-yellow-white);
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 16px;
+}
+
+input[id="place"] {
+  margin-bottom: 16px;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 25px auto;
+  gap: 16px 8px;
+  align-items: center;
+  margin-block: 32px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 26px;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 8px 32px;
+}
+
+.apply {
+  width: 100%;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 16px;
+}

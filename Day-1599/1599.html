@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <title>Filter UI Design</title>
+
+    <link rel="stylesheet" href="1599.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="/index.html">Home</a>
+    </header>
+    <main>
+      <div class="container__card">
+        <div class="shadow__card"></div>
+        <div class="close"></div>
+
+        <h1>Filter</h1>
+
+        <form action="">
+          <label for="place">From</label>
+          <input type="text" name="place" id="place" />
+          <label for="date">When do you want to travel?</label>
+          <input type="text" name="date" id="date" />
+
+          <div class="checkbox">
+            <input type="checkbox" name="flight" id="flight" />
+            <label for="flight">Show only direct flights</label>
+            <input type="checkbox" name="price" id="price" checked />
+            <label for="price">Show prices</label>
+          </div>
+
+          <input type="range" name="temperature" id="temperature" />
+          <label for="temperature">Temperature</label>
+
+          <div class="temp">
+            <p>-20&degC</p>
+            <p>-30&degC+</p>
+          </div>
+
+          <div class="apply">Apply filter</div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

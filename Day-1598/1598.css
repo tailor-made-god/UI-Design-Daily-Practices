@@ -1,0 +1,114 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("1598-fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("1598-fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-dark-blue: hsl(232, 52%, 29%);
+  --color-grey: hsl(234, 57%, 92%);
+  --color-shadow: hsl(36, 55%, 92%);
+  --color-bg: hsl(0, 0%, 90%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  background-color: var(--color-bg);
+  color: var(--color-dark-blue);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.container__card {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 2rem 4.75rem;
+  position: relative;
+  width: 63.3125rem;
+  height: 16.0625rem;
+  background-color: white;
+  border-radius: 4.375rem;
+  padding: 4.5rem;
+}
+
+.shadow__card {
+  position: absolute;
+  z-index: -1;
+  left: 4.875rem;
+  top: -2.0625rem;
+  width: 53.5625rem;
+  height: 20.1875rem;
+  background-color: var(--color-shadow);
+  border-radius: 60px;
+}
+
+.progress__mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container__round {
+  display: flex;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.done .container__round {
+  background-color: var(--color-dark-blue);
+  color: white;
+}
+
+.undone .container__round {
+  background-color: white;
+  color: var(--color-dark-blue);
+  border: 1px solid var(--color-dark-blue);
+}
+
+.done p {
+  font-weight: 600;
+}
+
+.progress__bar {
+  grid-column: 1 / 6;
+  position: relative;
+  width: 54.3125rem;
+  height: 0.75rem;
+  background-color: var(--color-grey);
+  border-radius: 1.25rem;
+}
+
+.progress__done {
+  position: absolute;
+  width: 18.5rem;
+  height: inherit;
+  background-color: var(--color-dark-blue);
+  border-radius: inherit;
+}

@@ -1,0 +1,112 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("1596-fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("1596-fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-gradient-start: hsl(342, 100%, 93%);
+  --color-gradient-end: hsl(230, 100%, 95%);
+  --color-blue: hsl(238, 62%, 16%);
+  --color-border: hsl(284, 100%, 69%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  color: var(--color-blue);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1158px;
+  height: 569px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 35px;
+}
+
+/* HEAD STYLES */
+
+.header__section {
+  display: flex;
+}
+
+.header__section .text {
+  padding: 8px 16px;
+}
+
+.border {
+  height: 2px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.container__nav:hover {
+  cursor: pointer;
+}
+
+.container__nav:hover .border {
+  background-color: var(--color-border);
+}
+
+/* CONTENT STYLES */
+
+.content__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li:first-child {
+  padding: 0px 0px 8px 16px;
+}
+
+li:not(:first-child) {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+li:not(:first-child):hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  cursor: pointer;
+}

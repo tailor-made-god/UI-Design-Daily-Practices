@@ -1,0 +1,152 @@
+/* merriweather-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("1597-fonts/merriweather-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("1597-fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-bg: hsl(222, 100%, 98%);
+  --color-shadow: hsl(222, 76%, 95%);
+  --color-blue: hsl(238, 51%, 23%);
+  --color-check-border: hsl(238, 29%, 82%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: var(--color-bg);
+  color: var(--color-blue);
+}
+
+h1 {
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+main {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.container__card {
+  position: relative;
+  width: 23.625rem;
+  height: 30.0625rem;
+  background-color: white;
+}
+
+.card__main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6875rem;
+  border-radius: 2.5rem;
+  border: 3px solid var(--color-blue);
+  padding: 3.5rem;
+}
+
+.shadow__card {
+  position: absolute;
+  z-index: -1;
+  left: -3.125rem;
+  width: 30rem;
+  height: 30rem;
+  background-color: var(--color-shadow);
+  border-radius: 50%;
+}
+
+.card__main {
+  display: flex;
+  flex-direction: column;
+  column-gap: 3.6875rem;
+}
+
+.info {
+  font-size: 1rem;
+}
+
+/* CHECKBOX STYLES */
+
+.card__checkbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 0.5625rem;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  width: 2.4375rem;
+  height: 2.4375rem;
+  align-content: center;
+  justify-content: center;
+  font-size: 2.4375rem;
+  padding: 0.1rem;
+  border: 1px solid var(--color-check-border);
+  border-radius: 5px;
+  background-color: var(--color-bg);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 2.1875rem;
+  height: 2.1875rem;
+  clip-path: polygon(22% 48%, 43% 64%, 84% 19%, 91% 26%, 44% 78%, 15% 54%);
+  transform: scale(0);
+  background-color: var(--color-blue);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* BUTTON STYLES */
+
+.card__button {
+  display: flex;
+}
+
+.button {
+  width: 7.8125rem;
+  height: 3.375rem;
+  border-radius: 0.5rem;
+  align-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.done {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.cancel {
+  background-color: var(--color-bg);
+  color: var(--color-blue);
+}
+
+a {
+  text-decoration: none;
+}

@@ -36,13 +36,6 @@ body {
   color: var(--color-blue);
 }
 
-h1 {
-  font-family: "Merriweather", Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
 main {
   display: grid;
   width: 100%;
@@ -52,38 +45,38 @@ main {
 
 .container__card {
   position: relative;
-  width: 23.625rem;
-  height: 30.0625rem;
+  width: 378px;
+  height: 480px;
   background-color: white;
-}
-
-.card__main {
   display: flex;
   flex-direction: column;
-  gap: 3.6875rem;
-  border-radius: 2.5rem;
+  justify-content: space-between;
+  border-radius: 40px;
   border: 3px solid var(--color-blue);
-  padding: 3.5rem;
+  padding: 53px;
 }
 
 .shadow__card {
   position: absolute;
   z-index: -1;
-  left: -3.125rem;
-  width: 30rem;
-  height: 30rem;
+  top: -3px;
+  left: -54px;
+  width: 480px;
+  height: 480px;
   background-color: var(--color-shadow);
   border-radius: 50%;
 }
 
-.card__main {
-  display: flex;
-  flex-direction: column;
-  column-gap: 3.6875rem;
+h1 {
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .info {
   font-size: 1rem;
+  min-width: 26ch;
 }
 
 /* CHECKBOX STYLES */
@@ -91,19 +84,19 @@ main {
 .card__checkbox {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1rem 0.5625rem;
+  gap: 16px 9px;
   align-items: center;
 }
 
 input[type="checkbox"] {
   appearance: none;
   display: flex;
-  width: 2.4375rem;
-  height: 2.4375rem;
+  width: 39px;
+  height: 39px;
   align-content: center;
   justify-content: center;
-  font-size: 2.4375rem;
-  padding: 0.1rem;
+  font-size: 39px;
+  padding: 2px;
   border: 1px solid var(--color-check-border);
   border-radius: 5px;
   background-color: var(--color-bg);
@@ -111,8 +104,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
   content: "";
-  width: 2.1875rem;
-  height: 2.1875rem;
+  width: 35px;
+  height: 35px;
   clip-path: polygon(22% 48%, 43% 64%, 84% 19%, 91% 26%, 44% 78%, 15% 54%);
   transform: scale(0);
   background-color: var(--color-blue);
@@ -126,15 +119,16 @@ input[type="checkbox"]:checked::before {
 
 .card__button {
   display: flex;
+  gap: 16px;
 }
 
 .button {
-  width: 7.8125rem;
-  height: 3.375rem;
-  border-radius: 0.5rem;
+  width: 125px;
+  height: 54px;
+  border-radius: 8px;
   align-content: center;
   text-align: center;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .done {

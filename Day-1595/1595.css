@@ -1,0 +1,200 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("1595-fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("1595-fonts/inter-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("1595-fonts/inter-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-bg: hsl(227, 100%, 97%);
+  --color-shadow: hsl(227, 34%, 79%);
+  --color-dark-blue: hsl(230, 62%, 28%);
+  --color-medium-blue: hsl(230, 100%, 64%);
+  --color-light-blue: hsl(227, 100%, 71%);
+  --color-shadow-blue: hsl(230, 77%, 54%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--color-bg);
+  color: var(--color-dark-blue);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.container__opencard {
+  margin-top: 50px;
+  width: 385px;
+  height: 709px;
+}
+
+.download {
+  display: flex;
+  height: 54px;
+  justify-content: end;
+  margin-bottom: 16px;
+}
+
+.download .word {
+  width: 176px;
+  height: inherit;
+  background-color: var(--color-medium-blue);
+  color: white;
+  font-size: 1.125rem;
+  text-align: center;
+  align-content: center;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.download .symbol {
+  position: relative;
+  width: 48px;
+  height: inherit;
+  background-color: var(--color-light-blue);
+  border-radius: 0px 8px 8px 0px;
+  color: white;
+  font-size: 1rem;
+}
+
+.one {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 18px;
+  left: 17px;
+}
+
+.two {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 18px;
+  left: 25px;
+}
+
+.container__card {
+  height: 639px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px 32px 48px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0px 0px 16px 24px;
+}
+
+.box {
+  display: flex;
+  gap: 8px;
+  padding: 24px;
+  align-content: center;
+  border-radius: 8px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-light-blue);
+  border-radius: 50%;
+  padding: 2px;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  clip-path: circle(50% at 50% 50%);
+  background-color: var(--color-medium-blue);
+  transform: scale(0);
+  align-self: center;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:checked .box {
+  background-color: var(--color-bg);
+}
+
+label {
+  align-content: center;
+}
+
+input[type="text"] {
+  width: 144.5px;
+  height: 51px;
+  color: inherit;
+  font-family: inherit;
+  border: 1px solid var(--color-shadow);
+  border-radius: 8px;
+  padding: 16px 16px 16px 24px;
+  cursor: pointer;
+}
+
+input[type="text"]::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  opacity: 0.5;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid var(--color-light-blue);
+}
+
+.textbox {
+  display: flex;
+  gap: 8px;
+  padding-left: 24px;
+}
+
+.container__free {
+  width: 297px;
+  height: 54px;
+  font-size: 1.125rem;
+  background-color: var(--color-medium-blue);
+  color: white;
+  text-align: center;
+  align-content: center;
+  border-radius: 8px;
+  box-shadow: 0px 8px var(--color-shadow-blue);
+  margin: 24px 0px 0px 24px;
+  cursor: pointer;
+}

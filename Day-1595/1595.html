@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>UI Dropdown Design</title>
+    <link rel="stylesheet" href="1595.css" />
+    <!-- <script src="1595.js"></script> -->
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <div class="container__opencard">
+          <div class="download">
+            <div class="word">Free Download</div>
+            <div class="symbol">
+              <div class="one">I</div>
+              <div class="two">I</div>
+            </div>
+          </div>
+
+          <div class="container__card">
+            <h1>Choose a size:</h1>
+
+            <div class="container__radio">
+              <div class="box">
+                <input
+                  type="radio"
+                  name="quality"
+                  id="original"
+                  onclick="changeColor(this)"
+                />
+                <label for="original"
+                  ><strong>Original</strong> &#x2022; 4967 x 7447</label
+                >
+              </div>
+              <div class="box">
+                <input
+                  type="radio"
+                  name="quality"
+                  id="large"
+                  onclick="changeColor(this)"
+                  checked
+                />
+                <label for="large"
+                  ><strong>Large</strong> &#x2022; 4967 x 7447</label
+                >
+              </div>
+              <div class="box">
+                <input
+                  type="radio"
+                  name="quality"
+                  id="medium"
+                  onclick="changeColor(this)"
+                />
+                <label for="medium"
+                  ><strong>Medium</strong> &#x2022; 4967 x 7447</label
+                >
+              </div>
+              <div class="box">
+                <input
+                  type="radio"
+                  name="quality"
+                  id="small"
+                  onclick="changeColor(this)"
+                />
+                <label for="small"
+                  ><strong>Small</strong> &#x2022; 4967 x 7447</label
+                >
+              </div>
+              <div class="box">
+                <input
+                  type="radio"
+                  name="quality"
+                  id="custom"
+                  onclick="changeColor(this)"
+                />
+                <label for="custom"><strong>Custom Size</strong></label>
+              </div>
+              <div class="textbox">
+                <input
+                  type="text"
+                  name="width"
+                  id="width"
+                  placeholder="Width"
+                  disabled
+                />
+                <input
+                  type="text"
+                  name="height"
+                  id="height"
+                  placeholder="Height"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="container__free">Free Download</div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="1595.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Payment Method UI Design</title>
+
+    <link rel="stylesheet" href="1593.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">Home</a>
+      <a href="">Page 9</a>
+    </header>
+    <main>
+      <div class="container__card">
+        <form action="">
+          <div class="card__inside">
+            <img src="Day-1593/svg/card.svg" alt="" class="icon card1" />
+            <img src="Day-1593/svg/card.svg" alt="" class="icon card2" />
+            <img src="Day-1593/svg/lock.svg" alt="" class="icon lock" />
+            <h1>Payment</h1>
+
+            <input type="radio" name="payment" id="card" />
+            <label for="card" class="main-label">Card</label>
+
+            <label for="number" class="sub-label">Pay with a card</label>
+
+            <input
+              type="text"
+              name="entry"
+              id="number"
+              placeholder="Card number"
+              disabled
+            />
+
+            <input
+              type="text"
+              name="entry"
+              id="expire"
+              placeholder="mm/dd"
+              disabled
+            />
+            <input
+              type="password"
+              name="entry"
+              id="cvc"
+              placeholder="CVC"
+              disabled
+            />
+
+            <input type="checkbox" name="entry" id="remember" disabled />
+            <label for="remember" class="check-label">Remember my card</label>
+
+            <input type="radio" name="payment" id="paytime" />
+            <label for="paytime" class="main-label">Get first. Pay later</label>
+            <label for="paytime" class="sub-label">Pay within 30 days.</label>
+
+            <button type="submit">Continue</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="1593.js"></script>
+</html>

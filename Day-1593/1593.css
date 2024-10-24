@@ -1,0 +1,217 @@
+/* merriweather-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("1593-fonts/merriweather-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("1593-fonts/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("1593-fonts/poppins-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --color-bg: hsl(0, 0%, 90%);
+  --color-dark-blue: hsl(234, 50%, 33%);
+  --color-grey: hsl(235, 24%, 73%);
+  /* --color-: hsl(, %, %);
+  --color-: hsl(, %, %);
+  --color-: hsl(, %, %); */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-dark-blue);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  place-content: center;
+}
+
+.container__card {
+  width: 645px;
+  height: 793px;
+  background-color: white;
+  border-radius: 60px;
+  padding: 80px;
+}
+
+.card__inside {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 32px 183px 214px;
+}
+
+h1 {
+  grid-column: 1 / 5;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-label {
+  grid-column: 2 / 5;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 52px;
+  align-self: center;
+}
+
+.sub-label,
+#number {
+  grid-column: 2 / 5;
+}
+
+.sub-label {
+  margin-top: 14px;
+}
+
+#number {
+  margin-top: 16px;
+  border-radius: 5px 5px 0 0;
+}
+
+#expire {
+  grid-column: 2 / 4;
+  border-radius: 0 0 0 5px;
+}
+
+#cvc {
+  grid-column: 4 / 5;
+  border-radius: 0 0 5px 0;
+}
+
+#remember {
+  grid-column: 2 / 3;
+  margin-top: 24px;
+}
+
+.check-label {
+  grid-column: 3 / 5;
+  margin: 24px 0 0 8px;
+  align-self: center;
+}
+
+button {
+  grid-column: 1 / 5;
+  height: 107px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  background-color: var(--color-dark-blue);
+  color: white;
+  margin-top: 52px;
+  border-radius: 4px;
+  padding: 0;
+  border: none;
+}
+
+input[type="radio"] {
+  grid-column: 1 / 2;
+  margin-top: 52px;
+  appearance: none;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 0 0 1px var(--color-dark-blue);
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 10px var(--color-dark-blue);
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 64px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--color-dark-blue);
+  padding: 16px 16px 16px 58px;
+  border: 1px solid hsla(234, 50%, 33%, 0.4);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 2px solid var(--color-dark-blue);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  align-items: center;
+  justify-items: center;
+  padding: 2px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-dark-blue);
+  border-radius: 4px;
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="radio"]:hover,
+input[type="text"]:hover,
+input[type="password"],
+input[type="checkbox"]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.icon {
+  filter: invert(16%) sepia(62%) saturate(1926%) hue-rotate(218deg)
+    brightness(94%) contrast(94%);
+
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+
+.card1 {
+  top: 186px;
+  left: 72px;
+}
+.card2 {
+  top: 250px;
+  left: 72px;
+}
+.lock {
+  top: 250px;
+  left: 287px;
+}
